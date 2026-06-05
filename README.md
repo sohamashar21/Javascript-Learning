@@ -1,5 +1,4 @@
 # Javascript Learning 
-
 A collection of JavaScript projects and practice exercises created while learning JavaScript fundamentals, DOM manipulation, asynchronous programming, and modern web development concepts.
 
 ## 📚 About
@@ -8,13 +7,12 @@ This repository contains multiple projects built during my JavaScript learning j
 
 ## 📂 Projects
 
-- Project1
-- Project2
-- Project3
-- Project4
-- Project4 (By Myself)
-- Project5
-- Project6
+* ColorChanger
+* BmiCalculator
+* NumberGuessingGame
+* KeyPressDisplay
+* DigitalClock
+* BackgroundChangeEachSecond
 
 Each project is stored in its own folder and can be run independently.
 
