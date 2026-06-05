@@ -21,7 +21,7 @@ This repository contains multiple projects built during my JavaScript learning j
 * KeyPressDisplay
 * DigitalClock
 * BackgroundChangeEachSecond
-  > > > > > > > cce4812e177145e45210f969cb388d143b37d001
+
 
 Each project is stored in its own folder and can be run independently.
 
@@ -66,7 +66,7 @@ Each project is stored in its own folder and can be run independently.
 - HTML5
 - CSS3
 - Mostly Focused on JavaScript (ES6+)
-  > > > > > > > cce4812e177145e45210f969cb388d143b37d001
+
 
 ## 🎯 Purpose
 
