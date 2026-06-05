@@ -13,15 +13,7 @@ This repository contains multiple projects built during my JavaScript learning j
 - NumberGuessingGame
 - KeyPressDisplay
 - DigitalClock
-- # BackgroundChangeEachSecond
-
-* ColorChanger
-* BmiCalculator
-* NumberGuessingGame
-* KeyPressDisplay
-* DigitalClock
-* BackgroundChangeEachSecond
-
+- BackgroundChangeEachSecond
 
 Each project is stored in its own folder and can be run independently.
 
@@ -66,7 +58,6 @@ Each project is stored in its own folder and can be run independently.
 - HTML5
 - CSS3
 - Mostly Focused on JavaScript (ES6+)
-
 
 ## 🎯 Purpose
 
