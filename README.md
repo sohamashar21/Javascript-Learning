@@ -13,7 +13,15 @@ This repository contains multiple projects built during my JavaScript learning j
 - NumberGuessingGame
 - KeyPressDisplay
 - DigitalClock
-- BackgroundChangeEachSecond
+- # BackgroundChangeEachSecond
+
+* ColorChanger
+* BmiCalculator
+* NumberGuessingGame
+* KeyPressDisplay
+* DigitalClock
+* BackgroundChangeEachSecond
+  > > > > > > > cce4812e177145e45210f969cb388d143b37d001
 
 Each project is stored in its own folder and can be run independently.
 
@@ -37,7 +45,28 @@ Each project is stored in its own folder and can be run independently.
 
 - HTML5
 - CSS3
+- # Mostly Focused on JavaScript (ES6+)
+
+* Variables and Data Types
+* Operators
+* Conditional Statements
+* Loops
+* Functions
+* Arrays and Objects
+* DOM Manipulation
+* Events
+* ES6 Features
+* Promises
+* Async/Await
+* API Integration
+* Local Storage
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
 - Mostly Focused on JavaScript (ES6+)
+  > > > > > > > cce4812e177145e45210f969cb388d143b37d001
 
 ## 🎯 Purpose
 
@@ -46,7 +75,12 @@ The goal of this repository is to:
 - Practice JavaScript concepts through projects.
 - Improve frontend development skills.
 - Build a strong foundation for React and full-stack development.
-- Track learning progress publicly.
+- # Track learning progress publicly.
+
+* Practice JavaScript concepts through projects.
+* Improve frontend development skills.
+* Build a strong foundation for React and full-stack development.
+* Track learning progress publicly.
 
 ## 📈 Learning Journey
 
@@ -54,7 +88,7 @@ I am continuously updating this repository as I learn new JavaScript concepts an
 
 ## 🤝 Connect With Me
 
-- GitHub: https://github.com/sohamashar21
+- # GitHub: https://github.com/sohamashar21
 
 ---
 

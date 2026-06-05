@@ -3,64 +3,63 @@
 
 // console.log(myName.truelength());
 
-let myHeros = ['thor','spiderman']
+let myHeros = ["thor", "spiderman"];
 
 let heroPower = {
-  thor:"thunder",
-  spiderman:"Spider",
+  thor: "thunder",
+  spiderman: "Spider",
 
-  getSpiderPower: function(){
-     console.log(`Spidy power is: ${this.spiderman}`);     
-  }
-}
+  getSpiderPower: function () {
+    console.log(`Spidy power is: ${this.spiderman}`);
+  },
+};
 
-Object.prototype.soham = function(){
-  console.log(`Soham is present in all objects`)
-}
+Object.prototype.soham = function () {
+  console.log(`Soham is present in all objects`);
+};
 
-Array.prototype.heySoham = function(){
-  console.log(`Soham says hello`)
-}
+Array.prototype.heySoham = function () {
+  console.log(`Soham says hello`);
+};
 
 // // heroPower.soham();
 // myHeros.soham()
 // myHeros.heySoham()
 // heroPower.heySoham()
 
-
 // Inheritance - prototype inheritance
 
 // Old Approach
 const user = {
-  name:"chai",
-  email:"chai@google.com"
-}
+  name: "chai",
+  email: "chai@google.com",
+};
 const Teacher = {
-  makeVideo : true
-}
+  makeVideo: true,
+};
 
 const teachingSupport = {
-  isAvailable: false
-}
+  isAvailable: false,
+};
 
 const TASupport = {
-  makeAssignment: 'Js Assignments',
+  makeAssignment: "Js Assignments",
   fullTime: true,
-  ___proto___: teachingSupport
-}
+  ___proto___: teachingSupport,
+};
 
-Teacher.___proto___ = user
+Teacher.___proto___ = user;
 
 // Modern Syntax
-Object.setPrototypeOf(teachingSupport,Teacher)
+Object.setPrototypeOf(teachingSupport, Teacher);
 
-let anotherUserName = 'soham          '
+let anotherUserName = "soham          ";
 
-String.prototype.trueLength = function(){
-   console.log(`${this}`)
-    console.log(`This length is: ${this.trim().length}`)
-}
+String.prototype.trueLength = function () {
+  console.log(`${this}`);
+  console.log(`This length is: ${this.trim().length}`);
+};
 
-anotherUserName.trueLength()
-"soham  ".trueLength()
-"iceTea   ".trueLength()  
+anotherUserName.trueLength();
+"soham  ".trueLength();
+"iceTea   ".trueLength();

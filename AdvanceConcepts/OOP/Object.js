@@ -9,18 +9,17 @@ console.log(multiplication.prototype);
 function createUser(username, score) {
   this.username = username;
   this.score = score;
-
 }
 
-createUser.prototype.increment = function (){
-  this.score++ 
-}
+createUser.prototype.increment = function () {
+  this.score++;
+};
 
-createUser.prototype.printMe = function(){
-  console.log(`Price is: ${this.score}`)
-}
+createUser.prototype.printMe = function () {
+  console.log(`Price is: ${this.score}`);
+};
 
-const chai = new createUser("Chai",25)
-const tea = new createUser("Tea",250)
+const chai = new createUser("Chai", 25);
+const tea = new createUser("Tea", 250);
 
-chai.printMe()
+chai.printMe();
