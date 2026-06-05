@@ -1,4 +1,3 @@
-# Javascript-Learning
 # JavaScript Learning
 
 A collection of JavaScript projects and practice exercises created while learning JavaScript fundamentals, DOM manipulation, asynchronous programming, and modern web development concepts.
