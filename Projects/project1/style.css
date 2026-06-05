@@ -1,0 +1,26 @@
+.button{
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+}
+ #grey{
+  color: grey;
+  background-color: grey;
+}
+ #white{
+  color: white;
+  background-color: white;
+}
+ #blue{
+  color: blue;
+  background-color: blue;
+}
+ #yellow{
+  color: yellow;
+  background-color: yellow;
+}
+ #purple{
+  color: purple;
+  background-color: purple;
+}

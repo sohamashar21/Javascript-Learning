@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  
+  </style>
+</head>
+
+<body>
+  <main style="display: flex; justify-content: center; align-items: center;">
+  <div style="display: flex; justify-content: center; align-items: center;
+  border: 2px solid; height: 65vh; width: 400px; flex-direction: column;">
+  <img src="" id="img-ht" alt="" style="height: 300px; width: 300px; border-radius: 50%; object-fit: contain; margin-top: 10px;">
+  <p style="text-align: center; font-size: 24px; font-weight: bold;" id="followers"></p> 
+  <button>Click me to show the data</button>
+</div>
+</main>
+  <!-- Value State Description
+  0 UNSENT Client has been created. open() not called yet.
+  1 OPENED open() has been called.
+  2 HEADERS_RECEIVED send() has been called, and headers and status are available.
+  3 LOADING Downloading; responseText holds partial data.
+  4 DONE The operation is complete. -->
+</body>
+<script>
+    const button = document.querySelector('button').addEventListener('click', function () {
+
+      const xhr = new XMLHttpRequest()
+      const reqestUrl = 'https://api.github.com/users/sohamashar21'
+      xhr.open('GET', reqestUrl);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+
+          const data = JSON.parse(this.responseText)
+     
+        console.log(data)
+        const img = document.querySelector('img')
+        img.src = data.avatar_url
+        const followers = document.getElementById('followers')
+        followers.innerHTML = `<p>Followers: ${data.followers}`
+  
+        }
+    }
+  
+      xhr.send();  
+  })
+  
+</script>
+
+</html>

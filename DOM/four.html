@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+
+<body style="background-color: rgb(44, 41, 41); color: white; ">
+  <ul class="lang">
+    <li>Javascript</li>
+  </ul>
+</body>
+
+<script>
+  //Not optimized
+  // function addLang(langName) {
+  //   const li = document.createElement('li')
+  //   li.innerHTML = `${langName}`;
+  //   document.querySelector('.lang').appendChild(li)
+  // }  
+
+  // addLang("python");
+  // addLang("Java")
+  // addLang("TypeScript")
+
+  //Optimized function to add 
+  function addOptimizedLang(langName) {
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(langName))
+    document.querySelector(".lang").appendChild(li);
+  }
+
+  addOptimizedLang("Golang")
+  addOptimizedLang("Python")
+
+  //Edit
+  const secondLang = document.querySelector('li:nth-child(2)')
+  console.log(secondLang);
+
+  const newLi = document.createElement('li')
+  newLi.textContent = "Rust"
+  secondLang.replaceWith(newLi)
+
+  //edit 
+  const firstLang = document.querySelector('li:first-child')
+  console.log(firstLang);
+
+  const newFirstLi = document.createElement('li')
+  newFirstLi.textContent = "TypeScript"
+  firstLang.replaceWith(newFirstLi)
+
+  //remove
+  const lastLang = document.querySelector('li:last-child')
+  lastLang.remove();
+</script>
+
+</html>

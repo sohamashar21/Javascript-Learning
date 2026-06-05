@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid rgb(111, 102, 86);
+}
+
+#wrapper h1 {
+  font-size: 4  0px;
+  margin-top: 16px;
+  padding: 20px;
+  font-weight: bold;
+  color: rgb(17, 135, 135);
+  margin-bottom: 10px;
+
+
+}
+
+#wrapper p{
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.form{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 25px;
+}
+
+#guessField{
+  height: 25px;
+  width: 150px;
+}
+#submit{
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.resultParse p{
+  padding-top: 10px;
+}
