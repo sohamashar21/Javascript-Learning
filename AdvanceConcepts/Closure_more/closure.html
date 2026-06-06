@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<button id="orange"> Orange </button>
+<button id="green"> Green </button>
+
+<body>
+  <script>
+    // Closure examples:
+    
+    function init() {
+      let name = "Mozilla";
+      function displayName() {
+        console.log(name);
+      }
+      displayName();
+    }
+    init();
+
+    function outer() {
+      let username = "Soham"
+      console.log("OUTER", secret) // Will not work
+      function inner() {
+        let secret = "my123" // Can't share this with parent or sibling functions
+        console.log("INNER", username)
+      }
+      function inner2() {
+        console.log("INNER2", username) //Prints
+        console.log("Secret", secret) // Error
+      }
+      inner();
+      inner2();
+    }
+    outer()
+    console.log("TOO OUTER", username) // Error
+
+
+    function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+          console.log(name);
+        }
+        return displayName;
+      }
+
+      const myFunc = makeFunc();
+      myFunc();
+  </script>
+
+  <script>
+    // Not closure
+    // document.getElementById("orange").onclick = function(e){
+    //   document.body.style.backgroundColor = e.target.id
+    // }
+    // document.getElementById("green").onclick = function(e){
+    //   document.body.style.backgroundColor = e.target.id
+    // }
+
+    // Correct way
+    function clickHandler(color) {
+      // document.body.style.backgroundColor = `${color}`
+
+      return function(){
+        document.body.style.backgroundColor = `${color}`
+      }
+
+    }
+
+    document.getElementById("orange").onclick = clickHandler("Orange")
+    document.getElementById("green").onclick = clickHandler("Green")
+
+  </script>
+</body>
+
+</html>
