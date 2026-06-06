@@ -1,4 +1,5 @@
-# Javascript Learning 
+# Javascript Learning
+
 A collection of JavaScript projects and practice exercises created while learning JavaScript fundamentals, DOM manipulation, asynchronous programming, and modern web development concepts.
 
 ## 📚 About
@@ -18,19 +19,76 @@ Each project is stored in its own folder and can be run independently.
 
 ## 🚀 Topics Covered
 
+### JavaScript Fundamentals
 - Variables and Data Types
 - Operators
 - Conditional Statements
 - Loops
 - Functions
 - Arrays and Objects
+- Scope and Execution Context
+
+### DOM & Browser APIs
 - DOM Manipulation
 - Events
-- ES6 Features
+- Local Storage
+- API Integration
+
+### Asynchronous JavaScript
+- Call Stack
+- Event Loop
 - Promises
 - Async/Await
-- API Integration
-- Local Storage
+- Fetch API
+
+### Object-Oriented JavaScript (OOP)
+- Objects and Object Literals
+- Constructor Functions
+- Classes
+- Static Properties and Methods
+- Encapsulation Basics
+
+### Advanced JavaScript
+- Prototypes
+- Prototype Inheritance
+- Lexical Scoping
+- Closures
+- Getter and Setter Methods
+- `call()`, `apply()`, and `bind()`
+- `this` Keyword
+- Object Prototype Extension
+- String Prototype Methods
+- Function Borrowing
+- Stack Overflow Concepts
+- JavaScript Internals
+
+### Modern JavaScript (ES6+)
+- Arrow Functions
+- Template Literals
+- Destructuring
+- Spread & Rest Operators
+- Modules
+- ES6 Features
+
+## 🆕 Recent Learning Progress
+
+Recently completed:
+
+- Fetch API and Data Fetching
+- Object-Oriented Programming in JavaScript
+- Prototype Chain & Inheritance
+- Advanced Prototype Manipulation
+- `call()`, `apply()`, and `bind()`
+- Class Constructors
+- Static Methods & Properties
+- Object Internals
+- Getters and Setters
+- Stack Overflow & Recursion Concepts
+- Lexical Scope
+- Closures
+- JavaScript Execution Behavior
+- Extending Built-in Prototypes (`Object.prototype`, `String.prototype`)
+- Understanding `this` in Different Contexts
 
 ## 🛠️ Technologies Used
 
@@ -49,7 +107,14 @@ The goal of this repository is to:
 
 ## 📈 Learning Journey
 
-I am continuously updating this repository as I learn new JavaScript concepts and build more projects.
+I am continuously updating this repository as I learn new JavaScript concepts, build projects, and explore advanced JavaScript internals.
+
+Current Focus:
+- Advanced JavaScript
+- React.js
+- Node.js & Express.js
+- Backend Development
+- Full-Stack Web Development
 
 ## 🤝 Connect With Me
 
