@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,700;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: purple;
+  color: white;
+  height: 69px;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  font-family: "Roboto", "sans-serif";
+}
+nav ul {
+  list-style-type: none;
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.containerGrid {
+  display: grid;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+  font-family: "Roboto", "sans-serif";
+  position: relative;
+}
+
+.box {
+  border: 1px solid black;
+  font-size: 8vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover {
+  background-color: rgb(242, 238, 246);
+}
+
+.info {
+  padding: 0 34px;
+  font-family: "Roboto", "sans-serif";
+}
+
+.gif img {
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+.bt-0 {
+  border-top: 0;
+}
+
+.bb-0 {
+  border-bottom: 0;
+}
+
+.br-0 {
+  border-right: 0;
+}
+
+.bl-0 {
+  border-left: 0;
+}
+
+.gameInfo {
+  margin-left: 30px;
+  font-size: 22px;
+}
+.reset {
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 35px;
+  padding-right: 35px;
+  border: none;
+  box-shadow: 2px 3px 10px rgb(198, 186, 198);
+  border-radius: 20px;
+  font-size: 16px;
+  font-family: bolder;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+  .gameContainer {
+    flex-wrap: wrap;
+  }
+  .gameInfo {
+    margin-top: 34px;
+  }
+
+  .gameInfo h1 {
+    font-size: 2.5rem;
+  }
+
+  .containerGrid {
+    display: grid;
+    grid-template-rows: repeat(3, 30vw);
+    grid-template-columns: repeat(3, 30vw);
+  }
+}
+
+
+  .line {
+  position: absolute;
+  background: blue;
+  width: 0;
+  height: 5px;
+  transition: width 0.5s ease;
+  }
+
