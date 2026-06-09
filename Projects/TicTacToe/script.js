@@ -45,7 +45,7 @@ const checkWiner = () => {
       let line = document.querySelector(".line");
 
       line.style.width = "20vw";
-      line.style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`;  
+      line.style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`;
       music.pause();
       victory.play();
     }
