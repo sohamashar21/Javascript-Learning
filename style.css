@@ -10,6 +10,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  scroll-behavior: smooth;
 }
 
 .cursor {
@@ -308,7 +309,7 @@ body {
   width: 460px;
 }
 #img4 {
-   height: 320px;
+  height: 320px;
   width: 460px;
 }
 #img5 {
@@ -323,7 +324,45 @@ body {
 #page5 {
   min-height: 100vh;
   width: 100%;
-  
+
   position: relative;
   z-index: 9;
+  padding: 140px 100px;
+}
+
+#page5 h2 {
+  font-size: 4vw;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 100px;
+  align-items: center;
+  padding: 2vw;
+  border-top: 1px solid #fff;
+  
+}
+
+.box:nth-last-child(1){
+  border-bottom: 1px solid #fff;
+}
+.box h3:first-child{
+    justify-self: start;
+}
+
+.inner-text-page5{
+    justify-self: center;
+}
+
+.box h4{
+    justify-self: end;
+}
+
+footer {
+  height: 90vh;
+  width: 100%;
+  background-color: red;
 }
