@@ -28,9 +28,9 @@ init()
 
 const cursor = document.querySelector(".cursor")
 const main = document.querySelector("#main")
-main.addEventListener("mousemove",function(e){
-   cursor.style.left = e.x+"px"
-   cursor.style.top = e.y+"px"
+document.addEventListener("mousemove",function(e){
+   cursor.style.left = e.x + 10 +"px"
+   cursor.style.top = e.y+ 10 + "px"
 })
 
 const pVideo = document.querySelector("#page1-video");
@@ -107,3 +107,71 @@ let tl3 = gsap.timeline({
 tl3.to('#main',{
  backgroundColor: "#0F0D0D"
 })
+
+const boxes = document.querySelectorAll(".box")
+boxes.forEach(function(e){
+  e.addEventListener("mouseenter",function(){
+   const att =  e.getAttribute("data-image")
+   cursor.style.width = "300px"
+   cursor.style.height = "250px"
+   cursor.style.borderRadius = "0"
+   cursor.style.backgroundImage=`url(${att})`;
+  })
+   e.addEventListener("mouseleave",function(){
+    e.style.backgroundColor="transparent"
+     cursor.style.width = "20px"
+   cursor.style.height = "20px"
+   cursor.style.borderRadius = "50%"
+   cursor.style.backgroundImage=`none`;
+  })
+})
+
+
+
+function buildMarquee(label) {
+
+  const repeat = label + " · ";
+  const text = repeat.repeat(10); 
+
+  return `
+    <div class="marquee-track">
+      <span>${text}</span>
+      <span>${text}</span>
+    </div>
+  `;
+}
+
+const purple = document.querySelector("#purple");
+const nav = document.querySelector("#nav");
+const workdisplay = document.getElementById("work-display");
+
+
+document.getElementById("work").addEventListener("mouseenter", () => {
+  purple.style.display = "flex";
+  purple.style.opacity = "1";
+  workdisplay.innerHTML = buildMarquee("WORK");
+});
+
+
+document.getElementById("studio").addEventListener("mouseenter", () => {
+  purple.style.display = "flex";
+  purple.style.opacity = "1";
+  workdisplay.innerHTML = buildMarquee("STUDIO");
+});
+
+
+document.getElementById("contact").addEventListener("mouseenter", () => {
+  purple.style.display = "flex";
+  purple.style.opacity = "1";
+  workdisplay.innerHTML = buildMarquee("CONTACT");
+});
+
+
+nav.addEventListener("mouseleave", () => {
+  purple.style.opacity = "0";
+  
+  setTimeout(() => {
+    purple.style.display = "none";
+    workdisplay.innerHTML = "";
+  }, 300);
+});
