@@ -10,7 +10,6 @@ html,
 body {
   height: 100%;
   width: 100%;
-  
 }
 
 .cursor {
@@ -47,8 +46,8 @@ body {
   z-index: 100;
   background-color: #edbfff;
   opacity: 0;
-  display: none;         
-  transition: opacity 0.3s ease;  
+  display: none;
+  transition: opacity 0.3s ease;
   align-items: center;
 }
 
@@ -68,11 +67,11 @@ body {
 
 #work-display .marquee-track {
   display: inline-flex;
-  animation: marquee-left  4s linear infinite;
+  animation: marquee-left 4s linear infinite;
 }
 
 #work-display .marquee-track span {
-  padding-right: 60px; 
+  padding-right: 60px;
   font-size: 100px;
   font-weight: 600;
   color: black;
@@ -80,7 +79,6 @@ body {
 
 #main {
   background-color: #0f0d0d;
-  
 }
 
 #page1 {
@@ -136,7 +134,7 @@ body {
   font-size: 8vw;
   font-weight: 300;
   font-family: PP MORI;
- 
+
   margin-left: 6vw;
 }
 
@@ -372,6 +370,7 @@ body {
   position: relative;
   z-index: 9;
   padding: 140px 100px;
+  border-bottom: 2px solid #6c6c6c;
 }
 
 #page5 h2 {
@@ -387,30 +386,409 @@ body {
   align-items: center;
   padding: 2vw;
   border-top: 1px solid #fff;
-  
 }
 
-.box:nth-last-child(1){
+.box:nth-last-child(1) {
   border-bottom: 1px solid #fff;
 }
-.box h3:first-child{
-    justify-self: start;
+.box h3:first-child {
+  justify-self: start;
 }
 
-.inner-text-page5{
-    justify-self: center;
+.inner-text-page5 {
+  justify-self: center;
 }
 
-.box h4{
-    justify-self: end;
+.box h4 {
+  justify-self: end;
 }
 
 footer {
-  height: 90vh;
+  min-height: 124vh;
   width: 100%;
-  background-color: red;
+  /* background-color: red; */
+  padding: 120px;
+ 
+  
 }
+#footer-div1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+#footer-div1 h1 {
+  height: 40vh;
+  width: 60vw;
+  font-size: 14vh;
+  padding-top: 250px;
+  font-weight: 200;
+color: black;
+}
+
+#footer-div1 button{
+  margin-top: 250px;
+  color: black;
+  height: 20vh;
+  width: 10vw;
+  border-radius: 50%;
+  border: none;
+}
+
+#footer-div2 {
+  padding-top: 180px;
+}
+#footer-div2 p{
+  font-size: 1.2rem;
+  font-weight: 400;
+  transform: translateX(1%);
+  color: black;
+}
+
+#footer-div3{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  line-height: 2rem;
+  padding-top: 80px;
+  transform: translateX(-6%);
+  color: black;
+}
+
+#footer-div3 ul li{
+  list-style: none;
+  color: black;
+}
+
 @keyframes marquee-left {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* ============================================
+   TABLET — max-width: 1024px
+   ============================================ */
+@media (max-width: 1024px) {
+
+  /* NAV */
+  #nav {
+    padding: 0 20px;
+  }
+
+  /* PAGE 1 — Hero */
+  #page1 {
+    padding-top: 18vw;
+  }
+  #page1 h1 {
+    font-size: 10vw;
+  }
+  #page1 h2 {
+    font-size: 10vw;
+    margin-left: 10vw;
+  }
+  #page1 video {
+    width: 80%;
+  }
+
+  /* PAGE 2 — About */
+  #page2 h1 {
+    font-size: 9vw;
+  }
+  #page2-left h2 {
+    font-size: 5vw;
+    line-height: 5.5vw;
+  }
+  #page2-right p {
+    font-size: 20px;
+  }
+  #page2-left {
+    width: 45%;
+  }
+  #page2-right {
+    width: 30%;
+  }
+
+  /* PAGE 3 — Selected Works */
+  #page3 h1 {
+    font-size: 8vw;
+    margin-left: 60px;
+  }
+  #page3-part1 img {
+    height: 500px;
+    width: 420px;
+    margin-top: 350px;
+    margin-left: 60px;
+  }
+  #page3-part1 video {
+    margin-right: 30px;
+    width: 45%;
+  }
+  #page3-part2 img {
+    height: 500px;
+    width: 400px;
+    margin-right: 100px;
+  }
+  #page3-part2 video {
+    margin-left: 100px;
+    width: 40%;
+  }
+  #page3-part3 h2 {
+    font-size: 3.5rem;
+    margin-left: 60px;
+  }
+  #page3-part3 button {
+    height: 120px;
+    width: 120px;
+    margin-right: 60px;
+  }
+
+  /* PAGE 4 — Services */
+  .page4 {
+    padding: 60px 40px;
+    padding-top: 140px;
+  }
+  .elem h3 {
+    font-size: 9vw;
+  }
+  #img1, #img2 { height: 280px; width: 360px; }
+  #img3, #img4 { height: 250px; width: 340px; }
+  #img5        { height: 230px; width: 330px; }
+  #img6        { height: 340px; width: 280px; }
+
+  /* PAGE 5 — Mentions */
+  #page5 {
+    padding: 100px 60px;
+  }
+  #page5 h2 {
+    font-size: 5vw;
+  }
+  .box {
+    padding: 1.5vw;
+  }
+}
+
+
+/* ============================================
+   MOBILE LARGE — max-width: 768px
+   ============================================ */
+@media (max-width: 768px) {
+
+  /* NAV — hide labels, keep logo + circle */
+  #nav-part2 {
+    display: none; /* hide Work/Studio/Contact text on mobile */
+  }
+  #nav {
+    padding: 0 20px;
+  }
+
+  /* PAGE 1 — Hero */
+  #page1 {
+    padding-top: 25vw;
+    text-align: center;
+  }
+  #page1 h1 {
+    font-size: 13vw;
+    margin-left: 0;
+  }
+  #page1 h2 {
+    font-size: 13vw;
+    margin-left: 0;
+  }
+  #page1 video {
+    width: 92%;
+    margin-top: 8vw;
+  }
+
+  /* PAGE 2 — About — stack vertically */
+  #page2 {
+    padding: 60px 5vw;
+  }
+  #page2 h1 {
+    font-size: 12vw;
+  }
+  #page2-container {
+    flex-direction: column;  /* stack left and right on top of each other */
+    height: auto;
+    gap: 40px;
+    padding-top: 40px;
+  }
+  #page2-left {
+    width: 100%;
+  }
+  #page2-right {
+    width: 100%;
+  }
+  #page2-left h2 {
+    font-size: 7vw;
+    line-height: 8vw;
+  }
+  #page2-right p {
+    font-size: 18px;
+  }
+  #page2-right button {
+    width: 50%;
+  }
+
+  /* PAGE 3 — Selected Works — stack vertically */
+  #page3 {
+    padding-top: 60px;
+  }
+  #page3 h1 {
+    font-size: 10vw;
+    margin-left: 20px;
+  }
+  #page3-part1 {
+    flex-direction: column;  /* stack image and video */
+    align-items: center;
+  }
+  #page3-part1 img {
+    height: auto;
+    width: 90%;
+    margin-top: 30px;
+    margin-left: 0;
+  }
+  #page3-part1 video {
+    width: 90%;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+  #page3-part2 {
+    flex-direction: column-reverse; /* video on top, image below */
+    align-items: center;
+  }
+  #page3-part2 img {
+    height: auto;
+    width: 90%;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+  #page3-part2 video {
+    width: 90%;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+  #page3-part3 {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  #page3-part3 h2 {
+    font-size: 2.5rem;
+    margin-left: 0;
+    text-align: center;
+  }
+  #page3-part3 button {
+    margin-right: 0;
+    height: 120px;
+    width: 120px;
+  }
+
+  /* PAGE 4 — Services */
+  .page4 {
+    padding: 40px 20px;
+    padding-top: 80px;
+  }
+  .elem h3 {
+    font-size: 13vw;
+  }
+  .text-div {
+    height: 100px;
+  }
+  /* Hide side images on mobile — too cramped */
+  .elem img {
+    display: none;
+  }
+
+  /* PAGE 5 — Mentions */
+  #page5 {
+    padding: 80px 20px;
+  }
+  #page5 h2 {
+    font-size: 7vw;
+  }
+  .box {
+    grid-template-columns: 1fr 1fr; /* drop the year column */
+    padding: 15px 10px;
+  }
+  .box h4 {
+    display: none; /* hide year on mobile */
+  }
+  .inner-text-page5 {
+    justify-self: end;
+  }
+
+  /* Cursor — hide on touch devices */
+  .cursor {
+    display: none;
+  }
+}
+
+
+/* ============================================
+   MOBILE SMALL — max-width: 480px
+   ============================================ */
+@media (max-width: 480px) {
+
+  /* PAGE 1 */
+  #page1 h1 {
+    font-size: 15vw;
+  }
+  #page1 h2 {
+    font-size: 15vw;
+  }
+  #page1 video {
+    width: 96%;
+  }
+
+  /* PAGE 2 */
+  #page2 h1 {
+    font-size: 14vw;
+  }
+  #page2-left h2 {
+    font-size: 8vw;
+    line-height: 10vw;
+  }
+  #page2-right p {
+    font-size: 16px;
+  }
+  #page2-right button {
+    width: 80%;
+  }
+
+  /* PAGE 3 */
+  #page3 h1 {
+    font-size: 12vw;
+  }
+  #page3-part3 h2 {
+    font-size: 1.8rem;
+  }
+
+  /* PAGE 4 */
+  .elem h3 {
+    font-size: 16vw;
+  }
+  .text-div {
+    height: 80px;
+  }
+
+  /* PAGE 5 */
+  #page5 h2 {
+    font-size: 9vw;
+  }
+  .box h3 {
+    font-size: 14px;
+  }
+
+  /* MARQUEE overlay — smaller text */
+  #work-display .marquee-track span {
+    font-size: 60px;
+  }
 }

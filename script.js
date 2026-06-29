@@ -26,12 +26,14 @@ function init() {
 
 init()
 
-const cursor = document.querySelector(".cursor")
-const main = document.querySelector("#main")
-document.addEventListener("mousemove",function(e){
-   cursor.style.left = e.x + 10 +"px"
-   cursor.style.top = e.y+ 10 + "px"
-})
+const cursor = document.querySelector(".cursor");
+const isTouchDevice = () => window.matchMedia("(pointer: coarse)").matches;
+
+document.addEventListener("mousemove", function (e) {
+  if (isTouchDevice()) return; // skip on phones/tablets
+  cursor.style.left = e.x + 10 + "px";
+  cursor.style.top = e.y + 10 + "px";
+});
 
 const pVideo = document.querySelector("#page1-video");
 
@@ -91,8 +93,6 @@ tl2.to("#main", {
   backgroundColor: "#fff",
 });
 
-
-
 let tl3 = gsap.timeline({
   scrollTrigger: {
     trigger: "#page1 h1",
@@ -107,6 +107,24 @@ let tl3 = gsap.timeline({
 tl3.to('#main',{
  backgroundColor: "#0F0D0D"
 })
+
+
+let tl4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#footer h1",
+    scroller: "#main",
+    // markers:true,
+    start: "top -740%",
+    end: "top -780%",
+    scrub: 3,
+  }
+});
+
+tl4.to('#main',{
+  backgroundColor:"#edbfff"
+})
+
+
 
 const boxes = document.querySelectorAll(".box")
 boxes.forEach(function(e){
@@ -125,6 +143,7 @@ boxes.forEach(function(e){
    cursor.style.backgroundImage=`none`;
   })
 })
+
 
 
 
