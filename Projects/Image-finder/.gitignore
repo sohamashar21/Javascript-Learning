@@ -1,1 +1,6 @@
-.img
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.webp
