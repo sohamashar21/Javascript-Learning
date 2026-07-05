@@ -62,7 +62,6 @@ nav button{
 }
 
 section{
-  height: 100%;
   flex-grow: 1;
   padding: var(--section-padding);
   display: flex;
@@ -70,7 +69,7 @@ section{
   gap: var(--padding-xxl);
 }
 
-section .task-colum{
+section .task-column{
   background: var(--bg-button-color);
   flex-grow: 1;
   padding: var(--padding-m);
@@ -78,9 +77,15 @@ section .task-colum{
   flex-direction: column;
   gap: var(--padding-m);
   border-radius: var(--border-radius-m);
+  transition: all 0.7s cubic-bezier(0.19,1,0.22,1); 
 }
 
-section .task-colum .heading{
+section .task-column.hover-over{
+  border: 2px dashed var(--primary-text-color);
+  scale: 1.03;
+}
+
+section .task-column .heading{
   width: 100%;
   display: flex;
   align-items: center;
@@ -89,16 +94,18 @@ section .task-colum .heading{
 }
 
 
-section .task-colum .task{
+section .task-column .task{
   background-color: var(--bg-task-color);
   padding: var(--padding-m);
   border-radius: var(--border-radius-m);
   display: flex;
   flex-direction: column;
   gap: var(--padding-s);
+  cursor: grab;
+  
 }
 
-section .task-colum .task button{
+section .task-column .task button{
   align-self: flex-end;
   cursor: pointer;
   padding: var(--padding-s) var(--padding-m);
