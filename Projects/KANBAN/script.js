@@ -1,7 +1,9 @@
 const todoEl = document.querySelector('#todo')
 const progressEl = document.querySelector('#progress')
 const doneEl = document.querySelector('#done')
-
+const modal = document.querySelector('.modal')
+const toggleModal = document.querySelector("#toggle-modal")
+const modalBg = document.querySelector('.bg')
 let draggedEl = null;
 
 console.log(todoEl,progressEl,done)
@@ -43,3 +45,13 @@ function addDragEvenetsOnColumn(column){
 addDragEvenetsOnColumn(todoEl)
 addDragEvenetsOnColumn(progressEl)
 addDragEvenetsOnColumn(doneEl)
+
+
+toggleModal.addEventListener('click',()=>{
+   modal.classList.toggle('active')
+})
+
+
+modalBg.addEventListener('click',()=>{
+  modal.classList.remove('active')
+})
