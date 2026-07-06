@@ -5,7 +5,7 @@ const doneEl = document.querySelector('#done')
 let draggedEl = null;
 
 
-console.log(todoEl,progressEl,done)
+console.log(todoEl,progressEl,doneEl)
 
 
 const tasks = document.querySelectorAll('.task')
@@ -37,7 +37,14 @@ function addDragEvenetsOnColumn(column){
    console.log("dropped",draggedEl,column);
 
    column.appendChild(draggedEl)
-   column.classList.remove("hover-over")
+   column.classList.remove("hover-over");
+
+   [todoEl,progressEl,doneEl].forEach(col =>{
+    const tasks = col.querySelectorAll('.task')
+    const count = col.querySelector(".right")
+
+    count.innerText = tasks.length; 
+   })
  })
 }
 
@@ -78,7 +85,16 @@ addTaskButton.addEventListener('click',()=>{
   <p>${taskDesc}</p>
   <button>Delete</button>
  `
- todoEl.appendChild(div)
+ todoEl.appendChild(div);
+ 
+ [todoEl,progressEl,doneEl].forEach(col =>{
+    const tasks = col.querySelectorAll('.task')
+    const count = col.querySelector(".right")
+
+    count.innerText = tasks.length; 
+   })
+
+ 
  div.addEventListener("drag",()=>{
   draggedEl = div;
  })
