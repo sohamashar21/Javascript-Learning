@@ -1,10 +1,9 @@
 const todoEl = document.querySelector('#todo')
 const progressEl = document.querySelector('#progress')
 const doneEl = document.querySelector('#done')
-const modal = document.querySelector('.modal')
-const toggleModal = document.querySelector("#toggle-modal")
-const modalBg = document.querySelector('.bg')
+
 let draggedEl = null;
+
 
 console.log(todoEl,progressEl,done)
 
@@ -47,6 +46,15 @@ addDragEvenetsOnColumn(progressEl)
 addDragEvenetsOnColumn(doneEl)
 
 
+
+
+/* Modal related logic */ 
+
+const toggleModal = document.querySelector("#toggle-modal")
+const modalBg = document.querySelector('.bg')
+const modal = document.querySelector('.modal')
+const addTaskButton = document.querySelector("#add-new-task")
+
 toggleModal.addEventListener('click',()=>{
    modal.classList.toggle('active')
 })
@@ -54,4 +62,25 @@ toggleModal.addEventListener('click',()=>{
 
 modalBg.addEventListener('click',()=>{
   modal.classList.remove('active')
+})
+
+addTaskButton.addEventListener('click',()=>{
+  const taskTitle = document.querySelector('#task-title-input').value
+  const taskDesc = document.querySelector('#task-desc-input').value
+
+ const div = document.createElement('div')
+
+ div.classList.add('task')
+ div.setAttribute("draggable","true")
+
+ div.innerHTML = `
+  <h2>${taskTitle}</h2>
+  <p>${taskDesc}</p>
+  <button>Delete</button>
+ `
+ todoEl.appendChild(div)
+ div.addEventListener("drag",()=>{
+  draggedEl = div;
+ })
+ modal.classList.remove('active')
 })
