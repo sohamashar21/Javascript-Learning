@@ -1,11 +1,19 @@
+let tasksData={}
+
 const todoEl = document.querySelector('#todo')
 const progressEl = document.querySelector('#progress')
 const doneEl = document.querySelector('#done')
-
+const column = [todoEl,progressEl,doneEl]
 let draggedEl = null;
 
+if(localStorage.getItem('tasks')){
+  const data = JSON.parse(localStorage.getItem("tasks"))
+  console.log(data)
+  for(const col in data){
+    console.log(col,data[col])
+  }
+}
 
-console.log(todoEl,progressEl,doneEl)
 
 
 const tasks = document.querySelectorAll('.task')
@@ -43,6 +51,8 @@ function addDragEvenetsOnColumn(column){
     const tasks = col.querySelectorAll('.task')
     const count = col.querySelector(".right")
 
+    
+    
     count.innerText = tasks.length; 
    })
  })
@@ -86,11 +96,21 @@ addTaskButton.addEventListener('click',()=>{
   <button>Delete</button>
  `
  todoEl.appendChild(div);
+
  
- [todoEl,progressEl,doneEl].forEach(col =>{
+
+ column.forEach(col =>{
     const tasks = col.querySelectorAll('.task')
     const count = col.querySelector(".right")
 
+    tasksData[col.id]  = Array.from(tasks).map(t => {
+      return {
+        title: t.querySelector('h2').innerText,
+        desc: t.querySelector('p').innerText
+      }
+    })
+   
+    localStorage.setItem("tasks",JSON.stringify(tasksData))
     count.innerText = tasks.length; 
    })
 
