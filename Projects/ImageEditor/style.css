@@ -131,7 +131,11 @@ main section .right .filter input::-webkit-slider-thumb{
   height: 20px;
   border-radius: 50%;
   background-color: red;
-   margin: -8.5px;
+  margin-top: -8.5px;
 }
 
-
+canvas{
+  background-color: red;
+  max-width: 90%;
+  max-height: 80vh;
+}

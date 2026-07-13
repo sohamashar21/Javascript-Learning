@@ -1,3 +1,5 @@
+
+
 const filters = {
  brightness:{
    value:100,
@@ -23,7 +25,7 @@ const filters = {
    max:200,
     unit:"%"
  },
- hueRotaion:{
+ hueRotation:{
    value:100,
    min: 0,
    max:360,
@@ -38,7 +40,8 @@ const filters = {
  grayscale:{
    value:0,
    min: 0,
-   max:100
+   max:100,
+   unit:"%"
  },
  sepia:{
   value:0,
@@ -59,6 +62,10 @@ const filters = {
    unit:"%"
  },
 }
+const imageCanvas = document.querySelector("#image-canvas")
+const imageInput = document.querySelector("#image-input")
+const filtersContainer = document.querySelector(".filters");
+const canvasCtx  = imageCanvas.getContext("2d")
 
 function createFilterElement(name , unit = "%" , value , min ,max) {
  
@@ -82,4 +89,25 @@ function createFilterElement(name , unit = "%" , value , min ,max) {
 }
 
 
-Object.keys(filters)
+Object.keys(filters).forEach(key=>{
+   const filterElemnt = createFilterElement(key , filters[key].unit , filters[key].value , filters[key].min , filters[key].max)
+      console.log(filterElemnt)
+      filtersContainer.appendChild(filterElemnt);
+    })
+
+
+imageInput.addEventListener("change",(e)=>{
+  const file = event.target.files[0]
+  const imagePlaceholder = document.querySelector(".placeholder");
+  imagePlaceholder.style.display = "none";
+  console.log(file)
+
+  const img = new Image();
+  img.src = URL.createObjectURL(file)
+  
+  img.onload = () => {
+    imageCanvas.width = img.width
+    imageCanvas.height = img.height
+    canvasCtx.drawImage(img,0,0)
+  }
+})
