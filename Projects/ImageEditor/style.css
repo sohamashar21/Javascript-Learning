@@ -135,7 +135,54 @@ main section .right .filter input::-webkit-slider-thumb{
 }
 
 canvas{
-  background-color: red;
+ 
   max-width: 90%;
   max-height: 80vh;
+  display: none;
 }
+
+.presets{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.presets button{
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #1f2937;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+.presets button:hover{
+    background: #3b82f6;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(59,130,246,.35);
+}
+
+
+.presets button:active{
+    transform: scale(0.96);
+}
+
+.presets button:focus{
+    outline: 2px solid #60a5fa;
+    outline-offset: 2px;
+}
+
+.presets button{
+    background:#2b2b2b;
+    color:#fff;
+}
+
+.presets button:hover{
+    background:#8b5cf6;
+}
+
